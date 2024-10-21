@@ -1,52 +1,93 @@
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .project {
-    border: 1px solid #ddd;
-    margin: 20px;
-    padding: 10px;
-    width: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.project-images img {
-    width: 70px;
-    height: 70px;
-    margin: 5px;
+.project-capsule {
+    flex: 1 1 20%;
 }
 
-.view-more {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    background-color: #007BFF;
-    color: white;
-    padding: 5px;
-    text-decoration: none;
+.project-capsule img {
+    width: auto;
 }
 
-.view-more:hover {
-    background-color: #0056b3;
+.project-content {
+    flex: 1 1 80%;
 }
 
-.project-details img {
-    width: 100%;
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.project-release-date {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.more-info-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #d0d4db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-info-btn:hover {
+    background-color: #b3b9c1;
+}
+
+.screenshots {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.small-images img {
+    width: 100px;
     height: auto;
-    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
 }
 
-.back-button {
+.main-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.steam-logo {
+    text-align: right;
     margin-top: 20px;
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
 }
 
-.back-button:hover {
-    background-color: #0056b3;
+.steam-logo img {
+    width: 100px;
 }

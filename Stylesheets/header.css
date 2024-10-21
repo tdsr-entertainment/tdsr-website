@@ -129,8 +129,10 @@ header {
     display: flex;
     align-items: center;
     padding: 10px;
+    text-decoration: none;
 }
 
 .social-media-logo{
-    height: 25px;
+    color: var(--textColor);
+    font-size: 24px;
 }
