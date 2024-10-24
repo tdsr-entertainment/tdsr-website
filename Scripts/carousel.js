@@ -1,30 +1,68 @@
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+let nbbtCurrentIndex = 0;
+let cltCurrentIndex = 0;
 
-function updateCarousel() {
-    const track = document.querySelector('.carousel-track');
+const nbbtCarouselTrackId = "nbbt_carousel_track";
+const cltCarouselTrackId = "clt_carousel_track";
+
+
+function updateCarousel(carouselId, value) {
+    const track = document.getElementById(carouselId);
+    const items = track.querySelectorAll('.carousel-item');
+
+    console.log(items);
+
+    const currentIndex = value > 0 ? nextSlide(carouselId, items.length) : prevSlide(carouselId, items.length);
+    console.log(currentIndex);
+
     const itemWidth = items[0].getBoundingClientRect().width + 10;
     const newTransformValue = -(itemWidth * currentIndex);
     track.style.transform = `translateX(${newTransformValue}px)`;
 }
 
-function nextSlide() {
-    if (currentIndex < totalItems - 4) { // Ensure only 4 visible items at a time
-        currentIndex++;
-    } else {
-        currentIndex = 0; // Go back to the start
+function nextSlide(carouselId, totalItems) {
+    if (carouselId === nbbtCarouselTrackId) {
+        if (nbbtCurrentIndex < totalItems - 3) { // Ensure only 4 visible items at a time
+            nbbtCurrentIndex++;
+        } else {
+            nbbtCurrentIndex = 0; // Go back to the start
+        }
+
+        return nbbtCurrentIndex;
     }
-    updateCarousel();
+    else if (carouselId === cltCarouselTrackId) {
+        if (cltCurrentIndex < totalItems - 3) { // Ensure only 4 visible items at a time
+            cltCurrentIndex++;
+        } else {
+            cltCurrentIndex = 0; // Go back to the start
+        }
+
+        return cltCurrentIndex;
+    }
+
+    return 0;
 }
 
-function prevSlide() {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = totalItems - 4; // Jump to the last group of images
+function prevSlide(carouselId, totalItems) {
+    if (carouselId === nbbtCarouselTrackId) {
+        if (nbbtCurrentIndex > 0) {
+            nbbtCurrentIndex--;
+        } else {
+            nbbtCurrentIndex = totalItems - 3; // Jump to the last group of images
+        }
+
+        return nbbtCurrentIndex;
     }
-    updateCarousel();
+    else if (carouselId === cltCarouselTrackId) {
+        if (cltCurrentIndex > 0) {
+            cltCurrentIndex--;
+        } else {
+            cltCurrentIndex = totalItems - 3; // Jump to the last group of images
+        }
+
+        return cltCurrentIndex;
+    }
+
+    return 0;
 }
 
 window.addEventListener('resize', updateCarousel);

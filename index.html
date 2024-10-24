@@ -85,20 +85,59 @@
         </div>
 
         <div class="carousel">
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <div class="carousel-track">
+            <button class="prev" onclick="updateCarousel('nbbt_carousel_track', -1)">&#10094;</button>
+            <div id="nbbt_carousel_track" class="carousel-track">
                 <div class="carousel-item"><img src="Images/NBBT/screenshot1.png" alt="Image 1" onclick="openModal(this)"></div>
                 <div class="carousel-item"><img src="Images/NBBT/screenshot2.png" alt="Image 2" onclick="openModal(this)"></div>
                 <div class="carousel-item"><img src="Images/NBBT/screenshot3.png" alt="Image 3" onclick="openModal(this)"></div>
                 <div class="carousel-item"><img src="Images/NBBT/screenshot4.png" alt="Image 4" onclick="openModal(this)"></div>
                 <div class="carousel-item"><img src="Images/NBBT/screenshot5.png" alt="Image 5" onclick="openModal(this)"></div>
                 <div class="carousel-item"><img src="Images/NBBT/screenshot6.png" alt="Image 6" onclick="openModal(this)"></div>
-                <!-- Add more images if needed -->
             </div>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <button class="next" onclick="updateCarousel('nbbt_carousel_track', 1)">&#10095;</button>
         </div>
     </div>
 </div>
+
+<div class="project">
+    <div class="project-capsule">
+        <img src="Images/CLT/VerticalCapsule.png" alt="Cyber Lounge Tycoon">
+    </div>
+
+    <div class="project-content">
+        <h1>Cyber Lounge Tycoon</h1>
+        <p class="project-release-date">Released: November 1st, 2023</p>
+        <p class="project-description">
+            Cyber Lounge Tycoon is a sandbox management game where you get to build and customize your own gaming club. Serve each customer or get a staff to do that for you. Upgrade and maintain your existing services. Expand and unlock new options. Decide what kind of club you want to run!
+        </p>
+        <div class="project-buttons">
+            <button class="more-info-btn">
+                <i class="fa-brands fa-steam"></i>Steam
+            </button>
+            <button class="more-info-btn">
+                <i class="fa-solid fa-circle-info"></i>More Info
+            </button>
+            <button class="more-info-btn">
+                <i class="fa-solid fa-newspaper"></i>Press Kit
+            </button>
+        </div>
+
+        <div class="carousel">
+            <button class="prev" onclick="updateCarousel('clt_carousel_track', -1)">&#10094;</button>
+            <div id="clt_carousel_track" class="carousel-track">
+                <div class="carousel-item"><img src="Images/CLT/screenshot1.png" alt="Image 1" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/CLT/screenshot2.png" alt="Image 2" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/CLT/screenshot3.png" alt="Image 3" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/CLT/screenshot4.png" alt="Image 4" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/CLT/screenshot5.png" alt="Image 5" onclick="openModal(this)"></div>
+            </div>
+            <button class="next" onclick="updateCarousel('clt_carousel_track', 1)">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<div></div>
+
 
 <!-- Modal for full-size image -->
 <div id="imageModal" class="modal">
