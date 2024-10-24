@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Stylesheets/header.css">
     <link rel="stylesheet" href="Stylesheets/footer.css">
     <link rel="stylesheet" href="Stylesheets/index/projects.css">
+    <link rel="stylesheet" href="Stylesheets/index/carousel.css">
 </head>
 <body>
 <header>
@@ -71,9 +72,41 @@
             Now's your chance to make it big in the Big Apple! Build food booths, grow produce, or locally source
             ingredients until you're the only competition left in New Brooklyn Bridge Tycoon!
         </p>
-        <button class="more-info-btn">More info</button>
+        <div class="project-buttons">
+            <button class="more-info-btn">
+                <i class="fa-brands fa-steam"></i>Steam
+            </button>
+            <button class="more-info-btn">
+                <i class="fa-solid fa-circle-info"></i>More Info
+            </button>
+            <button class="more-info-btn">
+                <i class="fa-solid fa-newspaper"></i>Press Kit
+            </button>
+        </div>
+
+        <div class="carousel">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="Images/NBBT/screenshot1.png" alt="Image 1" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/NBBT/screenshot2.png" alt="Image 2" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/NBBT/screenshot3.png" alt="Image 3" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/NBBT/screenshot4.png" alt="Image 4" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/NBBT/screenshot5.png" alt="Image 5" onclick="openModal(this)"></div>
+                <div class="carousel-item"><img src="Images/NBBT/screenshot6.png" alt="Image 6" onclick="openModal(this)"></div>
+                <!-- Add more images if needed -->
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
     </div>
 </div>
+
+<!-- Modal for full-size image -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+
+<script src="Scripts/carousel.js"></script>
 
 <footer>
     <p>&copy; 2024 TDSR Entertainment™ LLC</p>
