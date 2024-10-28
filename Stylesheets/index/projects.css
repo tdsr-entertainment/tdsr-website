@@ -65,6 +65,7 @@
     justify-content: center;
     color: var(--textColor);
     gap: 5px;
+    text-decoration: none;
 }
 
 .more-info-btn:hover {
