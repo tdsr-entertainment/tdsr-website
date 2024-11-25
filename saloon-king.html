@@ -68,31 +68,32 @@
 
         <!-- Game Title Logo -->
         <div class="title-logo">
-            <img class="nbbt-logo" src="Images/NBBT/Logo.png" alt="New Brooklyn Bridge Tycoon">
+            <img class="sk-logo" style="max-height: 250px;" src="Images/SK/Logo.png" alt="New Brooklyn Bridge Tycoon">
 
             <div class="project-buttons">
-                <a class="more-info-btn" href="https://store.steampowered.com/app/2759000/New_Brooklyn_Bridge_Tycoon/" target="_blank">
-                    <i class="fa-brands fa-steam"></i>Steam
+                <a class="more-info-btn" style="font-size: 1.25em; width: 165px; height: 50px;" href="https://store.steampowered.com/app/3313230/Saloon_King/" target="_blank">
+                    <i class="fa-brands fa-steam"></i>Full Version
                 </a>
-                <a class="more-info-btn" href="https://drive.google.com/drive/u/1/folders/1DK2UiI-osufmbzFE05rLgxQcuJeTcVP2" target="_blank">
-                    <i class="fa-solid fa-newspaper"></i>Press Kit
+                <a class="more-info-btn" style="font-size: 1.25em; width: 165px; height: 50px;" href="https://tom-milman.itch.io/saloon-king" target="_blank">
+                    <i class="fa-brands fa-itch-io"></i>Jam Version
                 </a>
             </div>
         </div>
 
         <!-- Character Image -->
         <div class="character">
-            <img src="Images/NBBT/Character.png" alt="Character">
+            <img src="Images/SK/Character.png" style="height: 320px" alt="Character">
         </div>
     </div>
 
     <p class="coming-soon">Coming Soon</p>
 
     <!-- Game Description -->
-    <div class="top-description">
-        <p>Build your food empire!</p>
-        <p>Manage the process from food production all the way to selling to customers.</p>
-        <p>Play against friends! You can even sabotage them if you’re willing to go down that path.</p>
+    <div class="top-description" style="font-size: 1.5em">
+        <p>A short, cinematic western shooter with wild, fast-paced spray 'n' pray action!</p>
+        <p>Help a sharp-shootin' renegade on a mission to take over the saloon.</p>
+        <p>Shoot first, ask questions never.</p>
+        <p>Clear out anyone daring enough to stand in your way!</p>
     </div>
 
 </div>
@@ -101,49 +102,14 @@
     <div class="carousel" style="max-width: 1300px">
         <button class="prev" onclick="updateCarousel('nbbt_carousel_track', -1)">&#10094;</button>
         <div id="nbbt_carousel_track" class="carousel-track">
-            <div class="carousel-item"><img src="Images/NBBT/screenshot1.png" alt="Image 1" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/NBBT/screenshot2.png" alt="Image 2" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/NBBT/screenshot3.png" alt="Image 3" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/NBBT/screenshot4.png" alt="Image 4" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/NBBT/screenshot5.png" alt="Image 5" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/NBBT/screenshot6.png" alt="Image 6" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot1.png" alt="Image 1" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot2.png" alt="Image 2" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot32.png" alt="Image 3" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot4.png" alt="Image 4" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot5.png" alt="Image 5" onclick="openModal(this)"></div>
         </div>
         <button class="next" onclick="updateCarousel('nbbt_carousel_track', 1)">&#10095;</button>
     </div>
-</div>
-
-<div class="description">
-    <p>
-        New York City just turned the Brooklyn bridge into a park, and the visitors are in desperate need of food! Now’s your chance to make it big in the Big Apple! Build food booths, grow produce, or locally source ingredients until you're the only competition left in New Brooklyn Bridge Tycoon!
-    </p>
-
-    <img src="Images/NBBT/Build-an-empire-header.png" alt="Build an empire">
-    <p> Build your food shops and serve hungry customers. </p>
-    <p> Take care of your shops and upgrade them to be even better. </p>
-
-    <img src="Images/NBBT/resource-management-header.png" alt="Resource management">
-    <p>
-        To make food, you will need ingredients.
-        Produce ingredients in factories or get them elsewhere, but your shops will need ingredients!
-    </p>
-    <p style="margin-top: 15px;">
-        You can produce ingredients. But sometimes it's easier to buy them from others.
-        Have too many ingredients? Sell them to those in need!
-    </p>
-
-    <img src="Images/NBBT/Sabotage-header.png" alt="Sabotage">
-    <p>
-        Competition is hard. Sometimes resorting to sabotage is the only option. Bend the rules, disrupt their shops and supply chains to tilt the playing field in your favor.
-    </p>
-    <p style="margin-top: 15px;">
-        In the cutthroat world of food empires, only the most strategic and daring will thrive!
-    </p>
-</div>
-
-<!-- Modal for full-size image -->
-<div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="fullImage">
 </div>
 
 <script src="Scripts/carousel.js"></script>
