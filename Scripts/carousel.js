@@ -1,8 +1,10 @@
 let nbbtCurrentIndex = 0;
 let cltCurrentIndex = 0;
+let skCurrentIndex = 0;
 
 const nbbtCarouselTrackId = "nbbt_carousel_track";
 const cltCarouselTrackId = "clt_carousel_track";
+const skCarouselTrackId = "sk_carousel_track";
 
 
 function updateCarousel(carouselId, value) {
@@ -38,6 +40,15 @@ function nextSlide(carouselId, totalItems) {
 
         return cltCurrentIndex;
     }
+    else if (carouselId === skCarouselTrackId) {
+        if (skCurrentIndex < totalItems - 3) { // Ensure only 4 visible items at a time
+            skCurrentIndex++;
+        } else {
+            skCurrentIndex = 0; // Go back to the start
+        }
+
+        return skCurrentIndex;
+    }
 
     return 0;
 }
@@ -60,6 +71,15 @@ function prevSlide(carouselId, totalItems) {
         }
 
         return cltCurrentIndex;
+    }
+    else if (carouselId === skCarouselTrackId) {
+        if (skCurrentIndex > 0) {
+            skCurrentIndex--;
+        } else {
+            skCurrentIndex = totalItems - 3; // Jump to the last group of images
+        }
+
+        return skCurrentIndex;
     }
 
     return 0;

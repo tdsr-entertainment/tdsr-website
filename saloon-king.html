@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>New Brooklyn Bridge Tycoon</title>
+    <title>Saloon King</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="Stylesheets/header.css">
     <link rel="stylesheet" href="Stylesheets/footer.css">
     <link rel="stylesheet" href="Stylesheets/project/project.css">
-    <link rel="stylesheet" href="Stylesheets/project/nbbt.css">
+    <link rel="stylesheet" href="Stylesheets/project/sk.css">
     <link rel="stylesheet" href="Stylesheets/index/carousel.css">
 </head>
 <body>
@@ -86,30 +86,40 @@
         </div>
     </div>
 
-    <p class="coming-soon">Coming Soon</p>
+    <p class="coming-soon">Released December 16th, 2024</p>
+</div>
 
-    <!-- Game Description -->
-    <div class="top-description" style="font-size: 1.5em">
-        <p>A short, cinematic western shooter with wild, fast-paced spray 'n' pray action!</p>
-        <p>Help a sharp-shootin' renegade on a mission to take over the saloon.</p>
-        <p>Shoot first, ask questions never.</p>
-        <p>Clear out anyone daring enough to stand in your way!</p>
-    </div>
+<div class="container">
+    <iframe width="817" height="460"
+            src="https://www.youtube.com/embed/8406-dcvIao?autoplay=1&mute=1">
+    </iframe>
+</div>
 
+<div class="container">
+    <iframe src="https://store.steampowered.com/widget/3313230/" frameborder="0" width="646" height="190"></iframe>
 </div>
 
 <div class="carousel-parent">
     <div class="carousel" style="max-width: 1300px">
         <button class="prev" onclick="updateCarousel('nbbt_carousel_track', -1)">&#10094;</button>
         <div id="nbbt_carousel_track" class="carousel-track">
-            <div class="carousel-item"><img src="Images/SK/screenshot1.png" alt="Image 1" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/SK/screenshot2.png" alt="Image 2" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/SK/screenshot32.png" alt="Image 3" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/SK/screenshot4.png" alt="Image 4" onclick="openModal(this)"></div>
-            <div class="carousel-item"><img src="Images/SK/screenshot5.png" alt="Image 5" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot 1.png" alt="Image 1" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot 2.png" alt="Image 2" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot 3.png" alt="Image 3" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot 5.png" alt="Image 5" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot 6.png" alt="Image 5" onclick="openModal(this)"></div>
+            <div class="carousel-item"><img src="Images/SK/screenshot 7.png" alt="Image 5" onclick="openModal(this)"></div>
         </div>
         <button class="next" onclick="updateCarousel('nbbt_carousel_track', 1)">&#10095;</button>
     </div>
+</div>
+
+<!-- Game Description -->
+<div class="description-main" style="font-size: 1.5em">
+    <p>A short, cinematic western shooter with wild, fast-paced spray 'n' pray action!</p>
+    <p>Help a sharp-shootin' renegade on a mission to take over the saloon.</p>
+    <p>Shoot first, ask questions never.</p>
+    <p>Clear out anyone daring enough to stand in your way!</p>
 </div>
 
 <script src="Scripts/carousel.js"></script>
